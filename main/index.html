@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sake Spring Kyoto Japanese Food Festival</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JavaScript and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: #333;
+        }
+        .navbar-nav .nav-item .nav-link {
+            color: #fff;
+        }
+        .navbar-nav .nav-item .nav-link:hover {
+            background-color: #555;
+        }
+
+        /* Carousel Styling */
+        #foodFestivalCarousel {
+            width: 100%;
+            max-width: 1200px; /* Make carousel wider */
+            height: 600px; /* Increase height */
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel-item img {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+
+        .carousel-caption {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+        }
+
+        /* Section Styling */
+        .section-title {
+            margin-top: 50px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        .section-title h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            position: relative;
+            color: #333;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: #e74c3c;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+        }
+
+        /* Events Section */
+        .event-container {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            display: flex; /* Add flexbox */
+            align-items: center; /* Center items vertically */
+        }
+        .event-container img {
+            max-width: 150px;
+            margin-right: 20px; /* Add space between image and text */
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer Styling */
+        footer {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sake Spring Kyoto Food Festival</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#events">Events</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel Section -->
+    <section id="home" class="mt-5">
+        <div class="container mt-5">
+            <div id="foodFestivalCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                    <li data-target="#foodFestivalCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#foodFestivalCarousel" data-slide-to="1"></li>
+                    <li data-target="#foodFestivalCarousel" data-slide-to="2"></li>
+                </ul>
+
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="sake.jpg" alt="Sake Tasting" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>Sake Tasting</h3>
+                            <p>Explore a variety of sake from different regions of Japan.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="sushi.jpg" alt="Sushi Station" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>Sushi Station</h3>
+                            <p>Enjoy freshly made sushi, prepared by expert chefs.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="japdes.jpg" alt="Japanese Desserts" class="d-block w-100">
+                        <div class="carousel-caption">
+                            <h3>Japanese Desserts</h3>
+                            <p>Indulge in sweet treats like mochi and matcha-flavored delights.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#foodFestivalCarousel" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#foodFestivalCarousel" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="mt-5">
+        <div class="container">
+            <div class="section-title">
+                <h2>Event Schedule</h2>
+            </div>
+            <div class="event-container">
+                <img src="sakeopen.jpg" alt="Opening Ceremony">
+                <div>
+                    <h4>Opening Ceremony</h4>
+                    <p>10:00 AM - Welcome to the Sake Spring Kyoto Festival! Join us for the grand opening with a special performance and greetings from our hosts.</p>
+                </div>
+            </div>
+            <div class="event-container">
+                <img src="saketasting.jpg" alt="Sake Tasting">
+                <div>
+                    <h4>Sake Tasting</h4>
+                    <p>11:00 AM - Explore a variety of sake flavors from various Japanese regions. Learn about the rich heritage of sake brewing.</p>
+                </div>
+            </div>
+            <div class="event-container">
+                <img src="sakesushi.png" alt="Sushi Making Demo">
+                <div>
+                    <h4>Sushi Making Demo</h4>
+                    <p>12:30 PM - Watch expert sushi chefs craft beautiful and delicious sushi rolls, and even learn a few techniques!</p>
+                </div>
+            </div>
+            <div class="event-container">
+                <img src="talkodrumming.jpg" alt="Live Taiko Drumming">
+                <div>
+                    <h4>Live Taiko Drumming</h4>
+                    <p>2:00 PM - Experience the powerful rhythms of Taiko drumming, a traditional Japanese performance art.</p>
+                </div>
+            </div>
+            <div class="event-container">
+                <img src="closing.jpg" alt="Closing Remarks">
+                <div>
+                    <h4>Closing Remarks</h4>
+                    <p>4:00 PM - Join us as we conclude the day’s festivities with a few words of thanks and a final performance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sake Spring Kyoto Festival. All rights reserved.</p>
+    </footer>
+</body>
+</html>
